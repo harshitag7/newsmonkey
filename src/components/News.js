@@ -84,7 +84,8 @@ export class News extends Component {
         <div className="container my-3 ">
           {this.state.loading && <Spinner />}
           {!this.state.loading && <div className=" row my-2">
-            {this.state.articles.map((article,key) => { return <NewsItem title={article.title} description={article.description} newsUrl={article.url} imageUrl={article.urlToImage} key={key} /> })}
+            
+            {this.state.articles?.map((article,key) => { return <NewsItem title={article.title} description={article.description} newsUrl={article.url} imageUrl={article.urlToImage} key={key} /> })}
 
           </div>}
         </div>
